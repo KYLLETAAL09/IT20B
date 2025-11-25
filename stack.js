@@ -48,4 +48,4 @@ console.log(stack1.is_empty());
 console.log(stack1.size());
 console.log("The top element is "+stack1.peek());
 console.log("Top element " +stack1.pop() + "is popped, the new top element is" + stack.peek());
-console
+console.log("The new stack size is "+stack1.size());
