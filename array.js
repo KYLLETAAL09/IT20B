@@ -20,9 +20,27 @@ class array{
 
         console.log(output);
     }
+
+    insert(index, element){
+        //correcting statement
+        if(index <0 || index > this.length){
+            console.log("invalid.index");
+            return;
+        }
+
+        //shifting condition
+        for(let i=this.length; i>index; i--){
+            this.data[i] = this.data[i-1];
+        }
+
+        //after condition
+        this.data[index] = element;
+        this.length++;
+    }
 }
 
 //
 arr1 = new Array([4,2,3]);
-
+arr1.traverse();
+arr1.insert(0,9);
 arr1.traverse();
