@@ -59,15 +59,24 @@ class LinkedList{
 
         console.log("Target not found");
     }
+       search(element){
+        let current = this.head;
 
+        while(current){
+            if(current.value === element)
+            return "Element found";
+            current = current.next;
+        }
+        return "Element not found";
     }
+}
 
-    
+
 let list1 = new LinkedList();
-list1.insert_at_end(4);
-list1.insert_at_end(2);
-list1.insert_at_beginning(2);
+@@ -69,4 +80,5 @@ list1.insert_at_beginning(2);
 list1.insert_at_end(3);
 console.log(list1.traverse());
 list1.insert_after(4,17);
 console.log(list1.traverse());
+console.log(list1.traverse());
+console.log(list1.search(4));
